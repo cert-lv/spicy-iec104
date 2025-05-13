@@ -115,6 +115,7 @@ type M_DP_TA_1_log: record {
     type_id_code: int;
     io: M_DP_TA_1_io;
 } &log;
+
 type M_ST_NA_1_log: record {
     ts: time;
     uid: string;
