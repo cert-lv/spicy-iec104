@@ -1507,13 +1507,14 @@ public function AsduIdent_rec(id: AsduIdent):
 ################################################################################
 
 public function M_SP_NA_1_rec(io: M_SP_NA_1_io):
-    tuple<uint64, tuple<spi: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
+    tuple<obj_addr: uint64,
+          tuple<spi: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, SIQ_rec(io.siq));
 }
 
 public function M_SP_TA_1_rec(io: M_SP_TA_1_io):
-    tuple<uint64,
+    tuple<obj_addr: uint64,
           tuple<spi: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv:bool>>
 {
@@ -1521,13 +1522,14 @@ public function M_SP_TA_1_rec(io: M_SP_TA_1_io):
 }
 
 public function M_DP_NA_1_rec(io: M_DP_NA_1_io):
-    tuple<uint64, tuple<dpi: uint8, bl: bool, sb: bool, nt: bool, iv: bool>>
+    tuple<obj_addr: uint64,
+          tuple<dpi: uint8, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, DIQ_rec(io.diq));
 }
 
 public function M_DP_TA_1_rec(io: M_DP_TA_1_io):
-    tuple<uint64,
+    tuple<obj_addr: uint64,
           tuple<dpi: uint8, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool>>
 {
@@ -1535,13 +1537,15 @@ public function M_DP_TA_1_rec(io: M_DP_TA_1_io):
 }
 
 public function M_ST_NA_1_rec(io: M_ST_NA_1_io):
-    tuple<uint64, tuple<val: int8, ts: bool>, tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
+    tuple<obj_addr: uint64,
+          tuple<val: int8, ts: bool>,
+          tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, VTI_rec(io.vti), QDS_rec(io.qds));
 }
 
 public function M_ST_TA_1_rec(io: M_ST_TA_1_io):
-    tuple<uint64,
+    tuple<obj_addr: uint64,
           tuple<val: int8, ts: bool>,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool>>
@@ -1550,13 +1554,14 @@ public function M_ST_TA_1_rec(io: M_ST_TA_1_io):
 }
 
 public function M_BO_NA_1_rec(io: M_BO_NA_1_io):
-    tuple<uint64, bsi: uint32, tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
+    tuple<obj_addr: uint64, bsi: uint32,
+          tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, io.bsi, QDS_rec(io.qds));
 }
 
 public function M_BO_TA_1_rec(io: M_BO_TA_1_io):
-    tuple<uint64, bsi: uint32,
+    tuple<obj_addr: uint64, bsi: uint32,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool>>
 {
@@ -1564,19 +1569,21 @@ public function M_BO_TA_1_rec(io: M_BO_TA_1_io):
 }
 
 public function M_ME_NA_1_rec(io: M_ME_NA_1_io):
-    tuple<uint64, nva: uint16, tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
+    tuple<obj_addr: uint64, nva: uint16,
+          tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, io.nva, QDS_rec(io.qds));
 }
 
 public function M_ME_NB_1_rec(io: M_ME_NB_1_io):
-    tuple<uint64, sva: uint16, tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
+    tuple<obj_addr: uint64, sva: uint16,
+          tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, io.sva, QDS_rec(io.qds));
 }
 
 public function M_ME_TB_1_rec(io: M_ME_TB_1_io):
-    tuple<uint64, sva: uint16,
+    tuple<obj_addr: uint64, sva: uint16,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool>>
 {
@@ -1584,7 +1591,7 @@ public function M_ME_TB_1_rec(io: M_ME_TB_1_io):
 }
 
 public function M_ME_TA_1_rec(io: M_ME_TA_1_io):
-    tuple<uint64, nva: uint16,
+    tuple<obj_addr: uint64, nva: uint16,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool>>
 {
@@ -1592,13 +1599,13 @@ public function M_ME_TA_1_rec(io: M_ME_TA_1_io):
 }
 
 public function M_ME_NC_1_rec(io: M_ME_NC_1_io):
-    tuple<uint64, r32: real, tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
+    tuple<obj_addr: uint64, r32: real, tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, io.r32, QDS_rec(io.qds));
 }
 
 public function M_ME_TC_1_rec(io: M_ME_TC_1_io):
-    tuple<uint64, r32: real,
+    tuple<obj_addr: uint64, r32: real,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool>>
 {
@@ -1606,14 +1613,14 @@ public function M_ME_TC_1_rec(io: M_ME_TC_1_io):
 }
 
 public function M_IT_NA_1_rec(io: M_IT_NA_1_io):
-    tuple<uint64, bcr: uint32,
+    tuple<obj_addr: uint64, bcr: uint32,
           tuple<sq: uint8, cy: bool, ca: bool, iv: bool>>
 {
     return (io.oa, io.bcr, QD_rec(io.qd));
 }
 
 public function M_IT_TA_1_rec(io: M_IT_TA_1_io):
-    tuple<uint64, bcr: uint32,
+    tuple<obj_addr: uint64, bcr: uint32,
           tuple<sq: uint8, cy: bool, ca: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool>>
 {
@@ -1621,7 +1628,7 @@ public function M_IT_TA_1_rec(io: M_IT_TA_1_io):
 }
 
 public function M_EP_TA_1_rec(io: M_EP_TA_1_io):
-    tuple<uint64, sep: SEP, ms: uint16,
+    tuple<obj_addr: uint64, sep: SEP, ms: uint16,
           tt24: tuple<ms: uint16, minute: uint8, iv: bool>>
 {
     return (io.oa, io.sep, io.ms, CP24Time2a_rec(io.tt));
@@ -1648,20 +1655,20 @@ public function M_EP_TC_1_rec(io: M_EP_TC_1_io):
 }
 
 public function M_PS_NA_1_rec(io: M_PS_NA_1_io):
-    tuple<uint64, bcr: uint32,
+    tuple<obj_addr: uint64, scd: uint32,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>>
 {
     return (io.oa, io.scd, QDS_rec(io.qds));
 }
 
 public function M_ME_ND_1_rec(io: M_ME_ND_1_io):
-    tuple<uint64, nva: uint16>
+    tuple<obj_addr: uint64, nva: uint16>
 {
     return (io.oa, io.nva);
 }
 
 public function M_SP_TB_1_rec(io: M_SP_TB_1_io):
-    tuple<uint64,
+    tuple<obj_addr: uint64,
           tuple<spi: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
@@ -1669,7 +1676,7 @@ public function M_SP_TB_1_rec(io: M_SP_TB_1_io):
 }
 
 public function M_DP_TB_1_rec(io: M_DP_TB_1_io):
-    tuple<uint64,
+    tuple<obj_addr: uint64,
           tuple<dpi: uint8, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
@@ -1677,7 +1684,7 @@ public function M_DP_TB_1_rec(io: M_DP_TB_1_io):
 }
 
 public function M_ST_TB_1_rec(io: M_ST_TB_1_io):
-    tuple<uint64,
+    tuple<obj_addr: uint64,
           tuple<val: int8, ts: bool>,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
@@ -1686,7 +1693,7 @@ public function M_ST_TB_1_rec(io: M_ST_TB_1_io):
 }
 
 public function M_BO_TB_1_rec(io: M_BO_TB_1_io):
-    tuple<uint64, bsi: uint32,
+    tuple<obj_addr: uint64, bsi: uint32,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
@@ -1694,7 +1701,7 @@ public function M_BO_TB_1_rec(io: M_BO_TB_1_io):
 }
 
 public function M_ME_TD_1_rec(io: M_ME_TD_1_io):
-    tuple<uint64, nva: uint16,
+    tuple<obj_addr: uint64, nva: uint16,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
@@ -1702,7 +1709,7 @@ public function M_ME_TD_1_rec(io: M_ME_TD_1_io):
 }
 
 public function M_ME_TE_1_rec(io: M_ME_TE_1_io):
-    tuple<uint64, sva: uint16,
+    tuple<obj_addr: uint64, sva: uint16,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
@@ -1710,7 +1717,7 @@ public function M_ME_TE_1_rec(io: M_ME_TE_1_io):
 }
 
 public function M_ME_TF_1_rec(io: M_ME_TF_1_io):
-    tuple<uint64, r32: real,
+    tuple<obj_addr: uint64, r32: real,
           tuple<ov: bool, bl: bool, sb: bool, nt: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
@@ -1718,7 +1725,7 @@ public function M_ME_TF_1_rec(io: M_ME_TF_1_io):
 }
 
 public function M_IT_TB_1_rec(io: M_IT_TB_1_io):
-    tuple<uint64, bcr: uint32,
+    tuple<obj_addr: uint64, bcr: uint32,
           tuple<sq: uint8, cy: bool, ca: bool, iv: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
@@ -1726,7 +1733,7 @@ public function M_IT_TB_1_rec(io: M_IT_TB_1_io):
 }
 
 public function M_EP_TD_1_rec(io: M_EP_TD_1_io):
-    tuple<uint64, sep: SEP, ms: uint16,
+    tuple<obj_addr: uint64, sep: SEP, ms: uint16,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, io.sep, io.ms, CP56Time2a_rec(io.tt));
@@ -1753,166 +1760,166 @@ public function M_EP_TF_1_rec(io: M_EP_TF_1_io):
 }
 
 public function C_SC_NA_1_rec(io: C_SC_NA_1_io):
-    tuple<uint64, tuple<scs: bool, qu: uint8, se: bool>>
+    tuple<obj_addr: uint64, tuple<scs: bool, qu: uint8, se: bool>>
 {
     return (io.oa, SCO_rec(io.sco));
 }
 
 public function C_DC_NA_1_rec(io: C_DC_NA_1_io):
-    tuple<uint64, tuple<dcs: uint8, qu: uint8, se: bool>>
+    tuple<obj_addr: uint64, tuple<dcs: uint8, qu: uint8, se: bool>>
 {
     return (io.oa, DCO_rec(io.dco));
 }
 
 public function C_RC_NA_1_rec(io: C_RC_NA_1_io):
-    tuple<uint64, tuple<rcs: uint8, qu: uint8, se: bool>>
+    tuple<obj_addr: uint64, tuple<rcs: uint8, qu: uint8, se: bool>>
 {
     return (io.oa, RCO_rec(io.rco));
 }
 
 public function C_SE_NA_1_rec(io: C_SE_NA_1_io):
-    tuple<uint64, nva: uint16, tuple<ql: uint8, se: bool>>
+    tuple<obj_addr: uint64, nva: uint16, tuple<ql: uint8, se: bool>>
 {
     return (io.oa, io.nva, QOS_rec(io.qos));
 }
 
 public function C_SE_NB_1_rec(io: C_SE_NB_1_io):
-    tuple<uint64, sva: uint16, tuple<ql: uint8, se: bool>>
+    tuple<obj_addr: uint64, sva: uint16, tuple<ql: uint8, se: bool>>
 {
     return (io.oa, io.sva, QOS_rec(io.qos));
 }
 
 public function C_SE_NC_1_rec(io: C_SE_NC_1_io):
-    tuple<uint64, r32: real, tuple<ql: uint8, se: bool>>
+    tuple<obj_addr: uint64, r32: real, tuple<ql: uint8, se: bool>>
 {
     return (io.oa, io.r32, QOS_rec(io.qos));
 }
 
 public function C_BO_NA_1_rec(io: C_BO_NA_1_io):
-    tuple<uint64, bsi: uint32>
+    tuple<obj_addr: uint64, bsi: uint32>
 {
     return (io.oa, io.bsi);
 }
 
 public function C_SC_TA_1_rec(io: C_SC_TA_1_io):
-    tuple<uint64, tuple<scs: bool, qu: uint8, se: bool>,
+    tuple<obj_addr: uint64, tuple<scs: bool, qu: uint8, se: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, SCO_rec(io.sco), CP56Time2a_rec(io.tt));
 }
 
 public function C_DC_TA_1_rec(io: C_DC_TA_1_io):
-    tuple<uint64, tuple<dcs: uint8, qu: uint8, se: bool>,
+    tuple<obj_addr: uint64, tuple<dcs: uint8, qu: uint8, se: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, DCO_rec(io.dco), CP56Time2a_rec(io.tt));
 }
 
 public function C_RC_TA_1_rec(io: C_RC_TA_1_io):
-    tuple<uint64, tuple<rcs: uint8, qu: uint8, se: bool>,
+    tuple<obj_addr: uint64, tuple<rcs: uint8, qu: uint8, se: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, RCO_rec(io.rco), CP56Time2a_rec(io.tt));
 }
 
 public function C_SE_TA_1_rec(io: C_SE_TA_1_io):
-    tuple<uint64, uint16, tuple<ql: uint8, se: bool>,
+    tuple<obj_addr: uint64, nva: uint16, tuple<ql: uint8, se: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, io.nva, QOS_rec(io.qos), CP56Time2a_rec(io.tt));
 }
 
 public function C_SE_TB_1_rec(io: C_SE_TB_1_io):
-    tuple<uint64, uint16, tuple<ql: uint8, se: bool>,
+    tuple<obj_addr: uint64, sva: uint16, tuple<ql: uint8, se: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, io.sva, QOS_rec(io.qos), CP56Time2a_rec(io.tt));
 }
 
 public function C_SE_TC_1_rec(io: C_SE_TC_1_io):
-    tuple<uint64, real, tuple<ql: uint8, se: bool>,
+    tuple<obj_addr: uint64, r32: real, tuple<ql: uint8, se: bool>,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, io.r32, QOS_rec(io.qos), CP56Time2a_rec(io.tt));
 }
 
 public function C_BO_TA_1_rec(io: C_BO_TA_1_io):
-    tuple<uint64, uint32,
+    tuple<obj_addr: uint64, bsi: uint32,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.oa, io.bsi, CP56Time2a_rec(io.tt));
 }
 
 public function M_EI_NA_1_rec(io: M_EI_NA_1_io):
-    tuple<uint64, coi: uint8, lpc: bool>
+    tuple<obj_addr: uint64, coi: uint8, lpc: bool>
 {
     return (io.oa, io.coi, io.lpc == 1);
 }
 
 public function C_IC_NA_1_rec(io: C_IC_NA_1_io):
-    tuple<uint64, uint8>
+    tuple<obj_addr: uint64, qoi: uint8>
 {
     return (io.oa, io.qoi);
 }
 
 public function C_CI_NA_1_rec(io: C_CI_NA_1_io):
-    tuple<uint64, qcc: tuple<rqt: uint8, frz: uint8>>
+    tuple<obj_addr: uint64, qcc: tuple<rqt: uint8, frz: uint8>>
 {
     return (io.oa, QCC_rec(io.qcc));
 }
 
 public function C_RD_NA_1_rec_a(io: C_RD_NA_1_io_a):
-    tuple<uint64, optional<uint8>>
+    tuple<obj_addr: uint64, optional<uint8>>
 {
     return (io.oa, io.raw_data);
 }
 
 public function C_RD_NA_1_rec_b(io: C_RD_NA_1_io_b):
-    tuple<uint64, optional<uint8>>
+    tuple<obj_addr: uint64, optional<uint8>>
 {
     return (io.obj_addr, Null);
 }
 
 public function C_CS_NA_1_rec(io: C_CS_NA_1_io):
-    tuple<uint64,
+    tuple<obj_addr: uint64,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.obj_addr, CP56Time2a_rec(io.tt),);
 }
 
 public function C_RP_NA_1_rec(io: C_RP_NA_1_io):
-    tuple<uint64, qrp: uint8>
+    tuple<obj_addr: uint64, qrp: uint8>
 {
     return (io.oa, io.qrp);
 }
 
 public function C_TS_TA_1_rec(io: C_TS_TA_1_io):
-    tuple<uint64, tsc: uint8,
+    tuple<obj_addr: uint64, tsc: uint8,
           tuple<ms: uint16, minute: uint8, iv: bool, hour: uint8, su: bool, day: uint8, dow: uint8, month: uint8, year: uint8>>
 {
     return (io.obj_addr, io.tsc, CP56Time2a_rec(io.tt));
 }
 
 public function P_ME_NA_1_rec(io: P_ME_NA_1_io):
-    tuple<uint64, nva: uint16, tuple<kpa: uint8, pop: bool, lpc: bool>>
+    tuple<obj_addr: uint64, nva: uint16, tuple<kpa: uint8, pop: bool, lpc: bool>>
 {
     return (io.obj_addr, io.nva, QPM_rec(io.qpm));
 }
 
 public function P_ME_NB_1_rec(io: P_ME_NB_1_io):
-    tuple<uint64, sva: uint16, tuple<kpa: uint8, pop: bool, lpc: bool>>
+    tuple<obj_addr: uint64, sva: uint16, tuple<kpa: uint8, pop: bool, lpc: bool>>
 {
     return (io.obj_addr, io.sva, QPM_rec(io.qpm));
 }
 
 public function P_ME_NC_1_rec(io: P_ME_NC_1_io):
-    tuple<uint64, r32: real, tuple<kpa: uint8, pop: bool, lpc: bool>>
+    tuple<obj_addr: uint64, r32: real, tuple<kpa: uint8, pop: bool, lpc: bool>>
 {
     return (io.obj_addr, io.r32, QPM_rec(io.qpm));
 }
 
 public function P_AC_NA_1_rec(io: P_AC_NA_1_io):
-    tuple<uint64, qpa: uint8>
+    tuple<obj_addr: uint64, qpa: uint8>
 {
     return (io.obj_addr, io.qpa);
 }
