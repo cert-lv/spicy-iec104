@@ -373,7 +373,7 @@ type OCI: record {
 
 type QCC: record {
     rqt: count;
-    frz: bool;
+    frz: count;
 } &log;
 
 type QD: record {
