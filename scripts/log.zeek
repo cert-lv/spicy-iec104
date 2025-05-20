@@ -79,7 +79,6 @@ type M_SP_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_SP_NA_1_io;
 } &log;
 
@@ -90,7 +89,6 @@ type M_SP_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_SP_TA_1_io;
 } &log;
 
@@ -101,7 +99,6 @@ type M_DP_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_DP_NA_1_io;
 } &log;
 
@@ -112,7 +109,6 @@ type M_DP_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_DP_TA_1_io;
 } &log;
 
@@ -123,7 +119,6 @@ type M_ST_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ST_NA_1_io;
 } &log;
 
@@ -134,7 +129,6 @@ type M_ST_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ST_TA_1_io;
 } &log;
 
@@ -145,7 +139,6 @@ type M_BO_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_BO_NA_1_io;
 } &log;
 
@@ -156,7 +149,6 @@ type M_BO_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_BO_TA_1_io;
 } &log;
 
@@ -167,7 +159,6 @@ type M_ME_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_NA_1_io;
 } &log;
 
@@ -178,7 +169,6 @@ type M_ME_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_TA_1_io;
 } &log;
 
@@ -189,7 +179,6 @@ type M_ME_NB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_NB_1_io;
 } &log;
 
@@ -200,7 +189,6 @@ type M_ME_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_TB_1_io;
 } &log;
 
@@ -211,7 +199,6 @@ type M_ME_NC_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_NC_1_io;
 } &log;
 
@@ -222,7 +209,6 @@ type M_ME_TC_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_TC_1_io;
 } &log;
 
@@ -233,7 +219,6 @@ type M_IT_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_IT_NA_1_io;
 } &log;
 
@@ -244,7 +229,6 @@ type M_IT_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_IT_TA_1_io;
 } &log;
 
@@ -255,7 +239,6 @@ type M_EP_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_EP_TA_1_io;
 } &log;
 
@@ -266,7 +249,6 @@ type M_EP_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_EP_TB_1_io;
 } &log;
 
@@ -277,7 +259,6 @@ type M_EP_TC_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_EP_TC_1_io;
 } &log;
 
@@ -288,7 +269,6 @@ type M_PS_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_PS_NA_1_io;
 } &log;
 
@@ -299,7 +279,6 @@ type M_ME_ND_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_ND_1_io;
 } &log;
 
@@ -310,7 +289,6 @@ type M_SP_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_SP_TB_1_io;
 } &log;
 
@@ -321,7 +299,6 @@ type M_DP_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_DP_TB_1_io;
 } &log;
 
@@ -332,7 +309,6 @@ type M_ST_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ST_TB_1_io;
 } &log;
 
@@ -343,7 +319,6 @@ type M_BO_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_BO_TB_1_io;
 } &log;
 
@@ -354,7 +329,6 @@ type M_ME_TD_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_TD_1_io;
 } &log;
 
@@ -365,7 +339,6 @@ type M_ME_TE_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_TE_1_io;
 } &log;
 
@@ -376,7 +349,6 @@ type M_ME_TF_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_ME_TF_1_io;
 } &log;
 
@@ -387,7 +359,6 @@ type M_IT_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_IT_TB_1_io;
 } &log;
 
@@ -398,7 +369,6 @@ type M_EP_TD_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_EP_TD_1_io;
 } &log;
 
@@ -409,7 +379,6 @@ type M_EP_TE_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_EP_TE_1_io;
 } &log;
 
@@ -420,7 +389,6 @@ type M_EP_TF_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_EP_TF_1_io;
 } &log;
 
@@ -431,7 +399,6 @@ type C_SC_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SC_NA_1_io;
 } &log;
 
@@ -442,7 +409,6 @@ type C_DC_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_DC_NA_1_io;
 } &log;
 
@@ -453,7 +419,6 @@ type C_RC_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_RC_NA_1_io;
 } &log;
 
@@ -464,7 +429,6 @@ type C_SE_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SE_NA_1_io;
 } &log;
 
@@ -475,7 +439,6 @@ type C_SE_NB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SE_NB_1_io;
 } &log;
 
@@ -486,7 +449,6 @@ type C_SE_NC_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SE_NC_1_io;
 } &log;
 
@@ -497,7 +459,6 @@ type C_BO_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_BO_NA_1_io;
 } &log;
 
@@ -508,7 +469,6 @@ type C_SC_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SC_TA_1_io;
 } &log;
 
@@ -519,7 +479,6 @@ type C_DC_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_DC_TA_1_io;
 } &log;
 
@@ -530,7 +489,6 @@ type C_RC_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_RC_TA_1_io;
 } &log;
 
@@ -541,7 +499,6 @@ type C_SE_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SE_TA_1_io;
 } &log;
 
@@ -552,7 +509,6 @@ type C_SE_TB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SE_TB_1_io;
 } &log;
 
@@ -563,7 +519,6 @@ type C_SE_TC_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_SE_TC_1_io;
 } &log;
 
@@ -574,7 +529,6 @@ type C_BO_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_BO_TA_1_io;
 } &log;
 
@@ -585,7 +539,6 @@ type M_EI_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: M_EI_NA_1_io;
 } &log;
 
@@ -596,7 +549,6 @@ type C_IC_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_IC_NA_1_io;
 } &log;
 
@@ -607,7 +559,6 @@ type C_CI_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_CI_NA_1_io;
 } &log;
 
@@ -618,7 +569,6 @@ type C_RD_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_RD_NA_1_io;
 } &log;
 
@@ -629,7 +579,6 @@ type C_CS_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_CS_NA_1_io;
 } &log;
 
@@ -640,7 +589,6 @@ type C_RP_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_RP_NA_1_io;
 } &log;
 
@@ -651,7 +599,6 @@ type C_TS_TA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: C_TS_TA_1_io;
 } &log;
 
@@ -662,7 +609,6 @@ type P_ME_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: P_ME_NA_1_io;
 } &log;
 
@@ -673,7 +619,6 @@ type P_ME_NB_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: P_ME_NB_1_io;
 } &log;
 
@@ -684,7 +629,6 @@ type P_ME_NC_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: P_ME_NC_1_io;
 } &log;
 
@@ -695,7 +639,6 @@ type P_AC_NA_1_log: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     io: P_AC_NA_1_io;
 } &log;
 
@@ -745,7 +688,6 @@ type UNK: record {
     is_orig: bool;
     apdu: count;
     type_id: ::IEC104TypeID;
-    type_id_code: int;
     data: string;
 } &log;
 
@@ -901,7 +843,6 @@ event iec104::m_sp_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_SP_NA_1,
-        $type_id_code=enum_to_int(M_SP_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_SP_NA_1, rec);
 }
@@ -917,7 +858,6 @@ event iec104::m_sp_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_SP_TA_1,
-        $type_id_code=enum_to_int(M_SP_TA_1),
         $io=io);
     Log::write(iec104::LOG_M_SP_TA_1, rec);
 }
@@ -933,7 +873,6 @@ event iec104::m_dp_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_DP_NA_1,
-        $type_id_code=enum_to_int(M_DP_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_DP_NA_1, rec);
 }
@@ -949,7 +888,6 @@ event iec104::m_dp_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_DP_TA_1,
-        $type_id_code=enum_to_int(M_DP_TA_1),
         $io=io);
     Log::write(iec104::LOG_M_DP_TA_1, rec);
 }
@@ -965,7 +903,6 @@ event iec104::m_st_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ST_NA_1,
-        $type_id_code=enum_to_int(M_ST_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_ST_NA_1, rec);
 }
@@ -981,7 +918,6 @@ event iec104::m_st_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ST_TA_1,
-        $type_id_code=enum_to_int(M_ST_TA_1),
         $io=io);
     Log::write(iec104::LOG_M_ST_TA_1, rec);
 }
@@ -997,7 +933,6 @@ event iec104::m_bo_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_BO_NA_1,
-        $type_id_code=enum_to_int(M_BO_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_BO_NA_1, rec);
 }
@@ -1013,7 +948,6 @@ event iec104::m_bo_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_BO_TA_1,
-        $type_id_code=enum_to_int(M_BO_TA_1),
         $io=io);
     Log::write(iec104::LOG_M_BO_TA_1, rec);
 }
@@ -1029,7 +963,6 @@ event iec104::m_me_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_NA_1,
-        $type_id_code=enum_to_int(M_ME_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_NA_1, rec);
 }
@@ -1045,7 +978,6 @@ event iec104::m_me_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_TA_1,
-        $type_id_code=enum_to_int(M_ME_TA_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_TA_1, rec);
 }
@@ -1061,7 +993,6 @@ event iec104::m_me_nb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_NB_1,
-        $type_id_code=enum_to_int(M_ME_NB_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_NB_1, rec);
 }
@@ -1077,7 +1008,6 @@ event iec104::m_me_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_TB_1,
-        $type_id_code=enum_to_int(M_ME_TB_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_TB_1, rec);
 }
@@ -1093,7 +1023,6 @@ event iec104::m_me_nc_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_NC_1,
-        $type_id_code=enum_to_int(M_ME_NC_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_NC_1, rec);
 }
@@ -1109,7 +1038,6 @@ event iec104::m_me_tc_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_TC_1,
-        $type_id_code=enum_to_int(M_ME_TC_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_TC_1, rec);
 }
@@ -1125,7 +1053,6 @@ event iec104::m_it_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_IT_NA_1,
-        $type_id_code=enum_to_int(M_IT_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_IT_NA_1, rec);
 }
@@ -1141,7 +1068,6 @@ event iec104::m_it_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_IT_TA_1,
-        $type_id_code=enum_to_int(M_IT_TA_1),
         $io=io);
     Log::write(iec104::LOG_M_IT_TA_1, rec);
 }
@@ -1157,7 +1083,6 @@ event iec104::m_ep_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_EP_TA_1,
-        $type_id_code=enum_to_int(M_EP_TA_1),
         $io=io);
     Log::write(iec104::LOG_M_EP_TA_1, rec);
 }
@@ -1173,7 +1098,6 @@ event iec104::m_ep_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_EP_TB_1,
-        $type_id_code=enum_to_int(M_EP_TB_1),
         $io=io);
     Log::write(iec104::LOG_M_EP_TB_1, rec);
 }
@@ -1189,7 +1113,6 @@ event iec104::m_ep_tc_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_EP_TC_1,
-        $type_id_code=enum_to_int(M_EP_TC_1),
         $io=io);
     Log::write(iec104::LOG_M_EP_TC_1, rec);
 }
@@ -1205,7 +1128,6 @@ event iec104::m_ps_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_PS_NA_1,
-        $type_id_code=enum_to_int(M_PS_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_PS_NA_1, rec);
 }
@@ -1221,7 +1143,6 @@ event iec104::m_me_nd_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_ND_1,
-        $type_id_code=enum_to_int(M_ME_ND_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_ND_1, rec);
 }
@@ -1237,7 +1158,6 @@ event iec104::m_sp_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_SP_TB_1,
-        $type_id_code=enum_to_int(M_SP_TB_1),
         $io=io);
     Log::write(iec104::LOG_M_SP_TB_1, rec);
 }
@@ -1253,7 +1173,6 @@ event iec104::m_dp_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_DP_TB_1,
-        $type_id_code=enum_to_int(M_DP_TB_1),
         $io=io);
     Log::write(iec104::LOG_M_DP_TB_1, rec);
 }
@@ -1269,7 +1188,6 @@ event iec104::m_st_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ST_TB_1,
-        $type_id_code=enum_to_int(M_ST_TB_1),
         $io=io);
     Log::write(iec104::LOG_M_ST_TB_1, rec);
 }
@@ -1285,7 +1203,6 @@ event iec104::m_bo_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_BO_TB_1,
-        $type_id_code=enum_to_int(M_BO_TB_1),
         $io=io);
     Log::write(iec104::LOG_M_BO_TB_1, rec);
 }
@@ -1301,7 +1218,6 @@ event iec104::m_me_td_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_TD_1,
-        $type_id_code=enum_to_int(M_ME_TD_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_TD_1, rec);
 }
@@ -1317,7 +1233,6 @@ event iec104::m_me_te_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_TE_1,
-        $type_id_code=enum_to_int(M_ME_TE_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_TE_1, rec);
 }
@@ -1333,7 +1248,6 @@ event iec104::m_me_tf_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_ME_TF_1,
-        $type_id_code=enum_to_int(M_ME_TF_1),
         $io=io);
     Log::write(iec104::LOG_M_ME_TF_1, rec);
 }
@@ -1349,7 +1263,6 @@ event iec104::m_it_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_IT_TB_1,
-        $type_id_code=enum_to_int(M_IT_TB_1),
         $io=io);
     Log::write(iec104::LOG_M_IT_TB_1, rec);
 }
@@ -1365,7 +1278,6 @@ event iec104::m_ep_td_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_EP_TD_1,
-        $type_id_code=enum_to_int(M_EP_TD_1),
         $io=io);
     Log::write(iec104::LOG_M_EP_TD_1, rec);
 }
@@ -1381,7 +1293,6 @@ event iec104::m_ep_te_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_EP_TE_1,
-        $type_id_code=enum_to_int(M_EP_TE_1),
         $io=io);
     Log::write(iec104::LOG_M_EP_TE_1, rec);
 }
@@ -1397,7 +1308,6 @@ event iec104::m_ep_tf_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_EP_TF_1,
-        $type_id_code=enum_to_int(M_EP_TF_1),
         $io=io);
     Log::write(iec104::LOG_M_EP_TF_1, rec);
 }
@@ -1413,7 +1323,6 @@ event iec104::c_sc_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SC_NA_1,
-        $type_id_code=enum_to_int(C_SC_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_SC_NA_1, rec);
 }
@@ -1429,7 +1338,6 @@ event iec104::c_dc_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_DC_NA_1,
-        $type_id_code=enum_to_int(C_DC_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_DC_NA_1, rec);
 }
@@ -1445,7 +1353,6 @@ event iec104::c_rc_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_RC_NA_1,
-        $type_id_code=enum_to_int(C_RC_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_RC_NA_1, rec);
 }
@@ -1461,7 +1368,6 @@ event iec104::c_se_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SE_NA_1,
-        $type_id_code=enum_to_int(C_SE_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_SE_NA_1, rec);
 }
@@ -1477,7 +1383,6 @@ event iec104::c_se_nb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SE_NB_1,
-        $type_id_code=enum_to_int(C_SE_NB_1),
         $io=io);
     Log::write(iec104::LOG_C_SE_NB_1, rec);
 }
@@ -1493,7 +1398,6 @@ event iec104::c_se_nc_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SE_NC_1,
-        $type_id_code=enum_to_int(C_SE_NC_1),
         $io=io);
     Log::write(iec104::LOG_C_SE_NC_1, rec);
 }
@@ -1509,7 +1413,6 @@ event iec104::c_bo_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_BO_NA_1,
-        $type_id_code=enum_to_int(C_BO_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_BO_NA_1, rec);
 }
@@ -1525,7 +1428,6 @@ event iec104::c_sc_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SC_TA_1,
-        $type_id_code=enum_to_int(C_SC_TA_1),
         $io=io);
     Log::write(iec104::LOG_C_SC_TA_1, rec);
 }
@@ -1541,7 +1443,6 @@ event iec104::c_dc_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_DC_TA_1,
-        $type_id_code=enum_to_int(C_DC_TA_1),
         $io=io);
     Log::write(iec104::LOG_C_DC_TA_1, rec);
 }
@@ -1557,7 +1458,6 @@ event iec104::c_rc_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_RC_TA_1,
-        $type_id_code=enum_to_int(C_RC_TA_1),
         $io=io);
     Log::write(iec104::LOG_C_RC_TA_1, rec);
 }
@@ -1573,7 +1473,6 @@ event iec104::c_se_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SE_TA_1,
-        $type_id_code=enum_to_int(C_SE_TA_1),
         $io=io);
     Log::write(iec104::LOG_C_SE_TA_1, rec);
 }
@@ -1589,7 +1488,6 @@ event iec104::c_se_tb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SE_TB_1,
-        $type_id_code=enum_to_int(C_SE_TB_1),
         $io=io);
     Log::write(iec104::LOG_C_SE_TB_1, rec);
 }
@@ -1605,7 +1503,6 @@ event iec104::c_se_tc_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_SE_TC_1,
-        $type_id_code=enum_to_int(C_SE_TC_1),
         $io=io);
     Log::write(iec104::LOG_C_SE_TC_1, rec);
 }
@@ -1621,7 +1518,6 @@ event iec104::c_bo_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_BO_TA_1,
-        $type_id_code=enum_to_int(C_BO_TA_1),
         $io=io);
     Log::write(iec104::LOG_C_BO_TA_1, rec);
 }
@@ -1637,7 +1533,6 @@ event iec104::m_ei_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=M_EI_NA_1,
-        $type_id_code=enum_to_int(M_EI_NA_1),
         $io=io);
     Log::write(iec104::LOG_M_EI_NA_1, rec);
 }
@@ -1653,7 +1548,6 @@ event iec104::c_ic_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_IC_NA_1,
-        $type_id_code=enum_to_int(C_IC_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_IC_NA_1, rec);
 }
@@ -1669,7 +1563,6 @@ event iec104::c_ci_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_CI_NA_1,
-        $type_id_code=enum_to_int(C_CI_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_CI_NA_1, rec);
 }
@@ -1685,7 +1578,6 @@ event iec104::c_rd_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_RD_NA_1,
-        $type_id_code=enum_to_int(C_RD_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_RD_NA_1, rec);
 }
@@ -1701,7 +1593,6 @@ event iec104::c_cs_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_CS_NA_1,
-        $type_id_code=enum_to_int(C_CS_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_CS_NA_1, rec);
 }
@@ -1717,7 +1608,6 @@ event iec104::c_rp_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_RP_NA_1,
-        $type_id_code=enum_to_int(C_RP_NA_1),
         $io=io);
     Log::write(iec104::LOG_C_RP_NA_1, rec);
 }
@@ -1733,7 +1623,6 @@ event iec104::c_ts_ta_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=C_TS_TA_1,
-        $type_id_code=enum_to_int(C_TS_TA_1),
         $io=io);
     Log::write(iec104::LOG_C_TS_TA_1, rec);
 }
@@ -1749,7 +1638,6 @@ event iec104::p_me_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=P_ME_NA_1,
-        $type_id_code=enum_to_int(P_ME_NA_1),
         $io=io);
     Log::write(iec104::LOG_P_ME_NA_1, rec);
 }
@@ -1765,7 +1653,6 @@ event iec104::p_me_nb_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=P_ME_NB_1,
-        $type_id_code=enum_to_int(P_ME_NB_1),
         $io=io);
     Log::write(iec104::LOG_P_ME_NB_1, rec);
 }
@@ -1781,7 +1668,6 @@ event iec104::p_me_nc_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=P_ME_NC_1,
-        $type_id_code=enum_to_int(P_ME_NC_1),
         $io=io);
     Log::write(iec104::LOG_P_ME_NC_1, rec);
 }
@@ -1797,7 +1683,6 @@ event iec104::p_ac_na_1
         $is_orig=is_orig,
         $apdu=c$apdu_counter,
         $type_id=P_AC_NA_1,
-        $type_id_code=enum_to_int(P_AC_NA_1),
         $io=io);
     Log::write(iec104::LOG_P_AC_NA_1, rec);
 }
@@ -1812,7 +1697,6 @@ event iec104::unknown_asdu
                     $is_orig=is_orig,
                     $apdu=c$apdu_counter,
                     $type_id=type_id,
-                    $type_id_code=enum_to_int(type_id),
                     $data=hex);
     Log::write(iec104::LOG_UNK, rec);
 }
