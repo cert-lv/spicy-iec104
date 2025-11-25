@@ -150,12 +150,12 @@ the following ASDU information object types:
 | ~P_ME_NB_1~ |    111 | yes         |
 | ~P_ME_NC_1~ |    112 | yes         |
 | ~P_AC_NA_1~ |    113 | yes         |
-| ~F_FR_NA_1~ |    120 |             |
-| ~F_SR_NA_1~ |    121 |             |
-| ~F_SC_NA_1~ |    122 |             |
-| ~F_LS_NA_1~ |    123 |             |
-| ~F_AF_NA_1~ |    124 |             |
-| ~F_SG_NA_1~ |    125 |             |
+| ~F_FR_NA_1~ |    120 | yes         |
+| ~F_SR_NA_1~ |    121 | yes         |
+| ~F_SC_NA_1~ |    122 | yes         |
+| ~F_LS_NA_1~ |    123 | yes         |
+| ~F_AF_NA_1~ |    124 | yes         |
+| ~F_SG_NA_1~ |    125 | yes         |
 | ~F_DR_TA_1~ |    126 |             |
 | ~F_SC_NB_1~ |    127 |             |
 

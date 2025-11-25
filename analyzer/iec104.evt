@@ -196,3 +196,21 @@ on iec104::P_ME_NC_1_io ->
 
 on iec104::P_AC_NA_1_io ->
     event iec104::p_ac_na_1($conn, $is_orig, iec104::P_AC_NA_1_rec(self));
+
+on iec104::F_FR_NA_1_io ->
+    event iec104::f_fr_na_1($conn, $is_orig, iec104::F_FR_NA_1_rec(self));
+
+on iec104::F_SR_NA_1_io ->
+    event iec104::f_sr_na_1($conn, $is_orig, iec104::F_SR_NA_1_rec(self));
+
+on iec104::F_SC_NA_1_io ->
+    event iec104::f_sc_na_1($conn, $is_orig, iec104::F_SC_NA_1_rec(self));
+
+on iec104::F_LS_NA_1_io ->
+    event iec104::f_ls_na_1($conn, $is_orig, iec104::F_LS_NA_1_rec(self));
+
+on iec104::F_AF_NA_1_io ->
+    event iec104::f_af_na_1($conn, $is_orig, iec104::F_AF_NA_1_rec(self));
+
+on iec104::F_SG_NA_1_io ->
+    event iec104::f_sg_na_1($conn, $is_orig, iec104::F_SG_NA_1_rec(self));
