@@ -807,6 +807,51 @@ type P_AC_NA_1_io: record {
     qpa: count;
 } &log;
 
+type F_FR_NA_1_io: record {
+    obj_addr: count;
+    fname: count;
+    len: count;
+    frq: count;
+} &log;
+
+type F_SR_NA_1_io: record {
+    obj_addr: count;
+    fname: count;
+    sname: count;
+    len: count;
+    srq: count;
+} &log;
+
+type F_SC_NA_1_io: record {
+    obj_addr: count;
+    fname: count;
+    sname: count;
+    scq: count;
+} &log;
+
+type F_LS_NA_1_io: record {
+    obj_addr: count;
+    fname: count;
+    sname: count;
+    lsq: count;
+    chs: count;
+} &log;
+
+type F_AF_NA_1_io: record {
+    obj_addr: count;
+    fname: count;
+    sname: count;
+    afq: count;
+} &log;
+
+type F_SG_NA_1_io: record {
+    obj_addr: count;
+    fname: count;
+    sname: count;
+    len: count;
+    seg: string;
+} &log;
+
 type AsduIdent: record {
     type_id: ::IEC104TypeID;
     nobj: count;

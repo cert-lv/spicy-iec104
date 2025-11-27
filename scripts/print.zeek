@@ -674,6 +674,66 @@ event iec104::p_ac_na_1
               " QPA=", io$qpa);
 }
 
+event iec104::f_fr_na_1
+    (c: connection, is_orig: bool, io: F_FR_NA_1_io)
+    &priority=-10
+{
+    print asdu_info(c),
+          cat("F_FR_NA_1 obj_addr=", io$obj_addr,
+              " fname=", io$fname, " len=", io$len,
+              " frq=", io$frq);
+}
+
+event iec104::f_sr_na_1
+    (c: connection, is_orig: bool, io: F_SR_NA_1_io)
+    &priority=-10
+{
+    print asdu_info(c),
+          cat("F_SR_NA_1 obj_addr=", io$obj_addr,
+              " fname=", io$fname, " sname=", io$sname,
+              " len=", io$len, " srq=", io$srq);
+}
+
+event iec104::f_sc_na_1
+    (c: connection, is_orig: bool, io: F_SC_NA_1_io)
+    &priority=-10
+{
+    print asdu_info(c),
+          cat("F_SC_NA_1 obj_addr=", io$obj_addr,
+              " fname=", io$fname, " sname=", io$sname,
+              " scq=", io$scq);
+}
+
+event iec104::f_ls_na_1
+    (c: connection, is_orig: bool, io: F_LS_NA_1_io)
+    &priority=-10
+{
+    print asdu_info(c),
+          cat("F_LS_NA_1 obj_addr=", io$obj_addr,
+              " fname=", io$fname, " sname=", io$sname,
+              " lsq=", io$lsq, " chs=", io$chs);
+}
+
+event iec104::f_af_na_1
+    (c: connection, is_orig: bool, io: F_AF_NA_1_io)
+    &priority=-10
+{
+    print asdu_info(c),
+          cat("F_AF_NA_1 obj_addr=", io$obj_addr,
+              " fname=", io$fname, " sname=", io$sname,
+              " afq=", io$afq);
+}
+
+event iec104::f_sg_na_1
+    (c: connection, is_orig: bool, io: F_SG_NA_1_io)
+    &priority=-10
+{
+    print asdu_info(c),
+          cat("F_SG_NA_1 obj_addr=", io$obj_addr,
+              " fname=", io$fname, " sname=", io$sname,
+              " len=", io$len, " seg=", io$seg);
+}
+
 event iec104::unknown_asdu
     (c: connection, is_orig: bool, type_id: ::IEC104TypeID, hex: string)
     &priority=-10

@@ -1185,6 +1185,82 @@ type P_AC_NA_1_io = unit(inout id: AsduIdent) {
     }
 };
 
+type F_FR_NA_1_io = unit(inout id: AsduIdent) {
+    obj_addr: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little) if (!id.x.sq);
+    fname: uint16;
+    len: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little);
+    frq: uint8;
+
+    var oa: uint64;
+    on %done {
+        self.oa = id.x.sq ? id.next_addr++ : self.obj_addr;
+    }
+};
+
+type F_SR_NA_1_io = unit(inout id: AsduIdent) {
+    obj_addr: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little) if (!id.x.sq);
+    fname: uint16;
+    sname: uint8;
+    len: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little);
+    srq: uint8;
+
+    var oa: uint64;
+    on %done {
+        self.oa = id.x.sq ? id.next_addr++ : self.obj_addr;
+    }
+};
+
+type F_SC_NA_1_io = unit(inout id: AsduIdent) {
+    obj_addr: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little) if (!id.x.sq);
+    fname: uint16;
+    sname: uint8;
+    scq: uint8;
+
+    var oa: uint64;
+    on %done {
+        self.oa = id.x.sq ? id.next_addr++ : self.obj_addr;
+    }
+};
+
+type F_LS_NA_1_io = unit(inout id: AsduIdent) {
+    obj_addr: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little) if (!id.x.sq);
+    fname: uint16;
+    sname: uint8;
+    lsq: uint8;
+    chs: uint8;
+
+    var oa: uint64;
+    on %done {
+        self.oa = id.x.sq ? id.next_addr++ : self.obj_addr;
+    }
+};
+
+type F_AF_NA_1_io = unit(inout id: AsduIdent) {
+    obj_addr: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little) if (!id.x.sq);
+    fname: uint16;
+    sname: uint8;
+    afq: uint8;
+
+    var oa: uint64;
+    on %done {
+        self.oa = id.x.sq ? id.next_addr++ : self.obj_addr;
+    }
+};
+
+type F_SG_NA_1_io = unit(inout id: AsduIdent) {
+    obj_addr: bytes &size=3 &convert=$$.to_uint(spicy::ByteOrder::Little) if (!id.x.sq);
+    fname: uint16;
+    sname: uint8;
+    len: uint8;
+    seg: bytes &size=self.len;
+
+    var oa: uint64;
+    on %done {
+        self.oa = id.x.sq ? id.next_addr++ : self.obj_addr;
+    }
+};
+
+
 ################################################################################
 
 
@@ -1353,6 +1429,12 @@ type AsduIOs = unit(apdu: Apdu, inout id: AsduIdent) {
         TypeID::P_ME_NB_1 -> p_me_nb_1: P_ME_NB_1_io(id)[id.x.nobj];
         TypeID::P_ME_NC_1 -> p_me_nc_1: P_ME_NC_1_io(id)[id.x.nobj];
         TypeID::P_AC_NA_1 -> p_ac_na_1: P_AC_NA_1_io(id)[id.x.nobj];
+        TypeID::F_FR_NA_1 -> f_fr_na_1: F_FR_NA_1_io(id)[id.x.nobj];
+        TypeID::F_SR_NA_1 -> f_sr_na_1: F_SR_NA_1_io(id)[id.x.nobj];
+        TypeID::F_SC_NA_1 -> f_sc_na_1: F_SC_NA_1_io(id)[id.x.nobj];
+        TypeID::F_LS_NA_1 -> f_ls_na_1: F_LS_NA_1_io(id)[id.x.nobj];
+        TypeID::F_AF_NA_1 -> f_af_na_1: F_AF_NA_1_io(id)[id.x.nobj];
+        TypeID::F_SG_NA_1 -> f_sg_na_1: F_SG_NA_1_io(id)[id.x.nobj];
         * -> raw: Raw(id.type_id, apdu.len - 10) &parse-at=self.start {
             self.set_input(self.start + (apdu.len - 10));
         }
@@ -1922,4 +2004,40 @@ public function P_AC_NA_1_rec(io: P_AC_NA_1_io):
     tuple<obj_addr: uint64, qpa: uint8>
 {
     return (io.obj_addr, io.qpa);
+}
+
+public function F_FR_NA_1_rec(io: F_FR_NA_1_io):
+    tuple<obj_addr: uint64, fname: uint16, len: uint64, frq: uint8>
+{
+    return (io.obj_addr, io.fname, io.len, io.frq);
+}
+
+public function F_SR_NA_1_rec(io: F_SR_NA_1_io):
+    tuple<obj_addr: uint64, fname: uint16, sname: uint16, len: uint64, srq: uint8>
+{
+    return (io.obj_addr, io.fname, io.sname, io.len, io.srq);
+}
+
+public function F_SC_NA_1_rec(io: F_SC_NA_1_io):
+    tuple<obj_addr: uint64, fname: uint16, sname: uint8, scq: uint8>
+{
+    return (io.obj_addr, io.fname, io.sname, io.scq);
+}
+
+public function F_LS_NA_1_rec(io: F_LS_NA_1_io):
+    tuple<obj_addr: uint64, fname: uint16, sname: uint8, lsq: uint8, chs: uint8>
+{
+    return (io.obj_addr, io.fname, io.sname, io.lsq, io.chs);
+}
+
+public function F_AF_NA_1_rec(io: F_AF_NA_1_io):
+    tuple<obj_addr: uint64, fname: uint16, sname: uint8, afq: uint8>
+{
+    return (io.obj_addr, io.fname, io.sname, io.afq);
+}
+
+public function F_SG_NA_1_rec(io: F_SG_NA_1_io):
+    tuple<obj_addr: uint64, fname: uint16, sname: uint8, len: uint8, seg: bytes>
+{
+    return (io.obj_addr, io.fname, io.sname, io.len, io.seg);
 }
