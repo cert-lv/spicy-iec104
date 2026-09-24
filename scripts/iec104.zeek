@@ -867,7 +867,27 @@ const ports = {
     2404/tcp
 };
 
+# Additional ROC Plus ports supplied through the environment.
+    global iec104_ports_str: string = getenv("ZEEK_IEC_104_PORTS");
+
 event zeek_init() &priority=5
 {
     Analyzer::register_for_ports(Analyzer::ANALYZER_SPICY_IEC104, ports);
+
+    if (iec104_ports_str != "") {
+        local iec104_custom_ports = split_string(iec104_ports_str, /,/);
+        local iec104_ports_tcp_custom: set[port] = {};
+        for (iec104_port_idx in iec104_custom_ports) {
+            local iec104_port = to_port(iec104_custom_ports[iec104_port_idx]);
+            local iec104_prot = get_port_transport_proto(iec104_port);
+            if (iec104_prot == tcp) {
+                add iec104_ports_tcp_custom[iec104_port];
+            }
+        }
+        if (|iec104_ports_tcp_custom| > 0) {
+            Analyzer::register_for_ports(Analyzer::ANALYZER_SPICY_IEC104,iec104_ports_tcp_custom);
+            }
+    }
 }
+
+
